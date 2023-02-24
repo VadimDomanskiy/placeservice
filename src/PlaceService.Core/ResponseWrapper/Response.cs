@@ -37,32 +37,4 @@ namespace PlaceService.Application.ResponseWrapper
             context.Response.WriteAsync(json);
         }
     }
-    /*internal class ResponseWrapper<T>
-    {
-        public ResponseWrapper()
-        {
-            Errors = new List<string>();
-        }
-
-        public ResponseWrapper(T data) : this()
-        {
-            Data = data;
-        }
-
-        public ResponseWrapper(string error) : this()
-        {
-            Errors.Add(error);
-        }
-
-        public ResponseWrapper(IEnumerable<string> errors) : this()
-        {
-            Errors.AddRange(errors);
-        }
-
-        public T Data { get; init; }
-        public bool Success => !Errors.Any();
-        public List<string> Errors { get; set; }
-
-        public HttpStatusCode? StatusCode { get; init; }
-    }*/
 }

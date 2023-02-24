@@ -1,7 +1,5 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using PlaceService.Api.Middleware;
 using PlaceService.Application.Extensions;
@@ -59,7 +57,6 @@ app.UseSwaggerUI(c =>
 });
 app.UseMiddleware<ApiKeyMiddleware>(apiKey.Key);
 app.UseMiddleware<ErrorHandlerMiddleware>();
-//app.UseAuthorization();
 
 app.MapControllers();
 
